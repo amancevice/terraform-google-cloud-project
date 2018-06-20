@@ -8,7 +8,7 @@ output "project_id" {
   value       = "${google_project.project.project_id}"
 }
 
-output "services" {
+output "project_services" {
   description = "Google Cloud Project enabled API services."
   value       = ["${google_project_services.project.services}"]
 }
