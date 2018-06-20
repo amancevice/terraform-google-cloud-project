@@ -1,7 +1,13 @@
 variable "bucket_name" {
-  description = "Google Cloud Storage bucket name for Terraform state files."
+  description = "Cloud Storage bucket name for Terraform state files."
   default     = ""
 }
+
+variable "bucket_storage_class" {
+  description = "Cloud Storage bucket storage class"
+  default     = "MULTI_REGIONAL"
+}
+
 variable "project_id" {
   description = "Google Cloud Project ID."
 }

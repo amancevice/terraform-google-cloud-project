@@ -11,7 +11,7 @@ resource "google_project" "project" {
 resource "google_storage_bucket" "bucket" {
   name          = "${local.bucket_name}"
   project       = "${google_project.project.id}"
-  storage_class = "MULTI_REGIONAL"
+  storage_class = "${var.bucket_storage_class}"
 }
 
 resource "google_project_services" "project" {
