@@ -1,8 +1,3 @@
-provider "google" {
-  credentials = "${file("account.json")}"
-  version     = "~> 1.14"
-}
-
 locals {
   project_name = "${coalesce("${var.project_name}", "${var.project_id}")}"
   bucket_name  = "${coalesce("${var.bucket_name}", "${var.project_id}-terraform")}"
